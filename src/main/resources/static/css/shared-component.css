@@ -1,0 +1,403 @@
+/* ========== Left Sidebar ================*/
+.top-bar{
+    display:none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px; /* Adjust the width as needed */
+    background-color: var(--primary); /* Adjust the color as needed */
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    z-index: var(--z-fixed);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+    color: var(--text);
+}
+
+.logo img{
+    width: 80px; 
+    height: auto;
+    margin-right: -10px;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-left: 15px;
+}
+
+.profile img{
+    width: 60px;
+}
+
+.profile-data{
+    margin-left: 10px;
+    color: var(--text);
+}
+
+.name{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.username{
+    font-size: var(--smaller-font-size);
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.nav-links i{
+    color: var(--secondary);
+    font-size: var(--h2-font-size);
+    margin-right: 10px;
+}
+
+.nav-menu{
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    color: var(--text);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-normal);
+    background-color: transparent; /* Ensure it is transparent */
+}
+
+.nav-menu:hover{
+    color: var(--text);
+    background: var(--secondary);
+}
+
+.nav-menu:hover i{
+    color: var(--text);
+    background: var(--secondary);
+}
+
+.nav-menu-active{
+    color: var(--text);
+    background: var(--secondary);
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+}
+
+.nav-menu-active i{
+    color: var(--text);
+    background: var(--secondary);
+}
+
+
+
+.flex-grow {
+    flex-grow: 1; /* This will push the sign out link to the bottom */
+}
+
+.signout {
+    margin-top: auto; /* Ensures that the signout link is at the bottom */
+}
+
+.signout-link {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    padding-bottom: 35px;
+    color: var(--text);
+    font-size: var(--normal-font-size);
+    transition: all .50s ease;
+}
+
+.signout-link img {
+    margin-right: 10px;
+    width: 25px;
+}
+
+/* ===== Main Section Base Styles ========*/
+.main-section {
+    margin-left: 250px; /* Same as the width of the sidebar */
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.main-container {
+    width: 80%;
+    padding: 20px; /* Add padding */
+}
+
+.bottom-bar{
+    display:none;
+}
+
+
+/* =========== Error Component ==================*/
+.notification-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 5px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateX(100%); /* Off-screen */
+}
+
+.notification-container.show {
+    opacity: 1; /* Show container */
+    transform: translateX(0%); /* Slide in */
+}
+
+.notification-container.success {
+    border: 1px solid var(--text);
+}
+
+.notification-container.error {
+    border: 1px solid var(--text); 
+}
+
+.notification-container.info {
+    border: 1px solid var(--text);
+}
+
+.close-notification {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+.notification-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notification-message p{
+	font-weight: var(--font-normal);
+	font-size: var(--smaller-font-size); 
+}
+
+.close-notification i {
+    font-size: var(--small-font-size);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /* Adjust for smaller screens */
+    .notification-container {
+        top: 5px;
+        right: 5px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .close-notification {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+/* =========== Top Bar ============= */
+@media screen and (max-width: 767px){
+    .sidebar{
+        display: none;
+    }
+
+    .main-section{
+        margin-left: 0px;
+    }
+
+    .main-container{
+        width: 90%;
+    }
+
+    .top-bar {
+        position: fixed;
+        height: 72px;
+        background: var(--primary);
+        display: flex;
+        justify-content: space-between; /* Add this line */
+        align-items: center;
+        width: 100%; /* Ensure full width */
+        padding: 0 20px; /* Optional: Add padding to adjust spacing */
+    }
+
+    .logo img{
+        width: 70px; 
+        height: auto;
+        margin-right: -10px;
+        margin-left: -20px;
+    }
+
+    .topbar-profile{
+        display: flex;
+        justify-content: center;
+    }
+
+    .topbar-profile-link{
+        display: flex;
+        justify-content: center;
+    }
+
+    .topbar-profile img{
+        width: 32px;
+        height: auto;
+    }
+
+
+/* =========== BOTTOM BAR ==============*/
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Adjust height */
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    z-index: var(--z-fixed);
+}
+
+.bottombar-menu-icon {
+    cursor: pointer;
+    color: var(--secondary);
+    font-size: 22px; /* Adjust icon size */
+    margin-right: 20px;
+    z-index: var(--z-modal);
+}
+
+.bottombar-signout{
+    z-index: var(--z-modal);
+}
+
+.bottombar-signout-link{
+    display: flex;
+    justify-content: center;
+    font-size: var(--normal-font-size);
+    color: var(--text);
+    margin-left: 20px;
+    margin-right: 20px;
+    
+    
+}
+
+.bottombar-signout-link img{
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+#menu-icon.uil-apps {
+    display: inline-block;
+}
+
+#menu-icon.uil-times {
+    display: inline-block;
+}
+
+.slide-up-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 250px; /* Adjust the height as needed */
+    background-color: var(--primary);
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    grid-template-rows: 1fr 1fr; /* Create 2 equal-height rows */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-bottom: 45px;
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition */
+    transform: translateY(100%); /* Start with the bar hidden */
+}
+
+.slide-up-bar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--normal-font-size);
+    color: var(--text);
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+.slide-up-bar i {
+    font-size: 18px;
+    color: var(--secondary);
+}
+
+.bottombar-nav-menu:hover{
+    background: var(--secondary); /* Change background color */
+    color: var(--text); /* Change text color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.bottombar-nav-menu:hover i {
+    color: var(--text);
+}
+/* Reset margins and paddings to standardize all elements */
+.bottombar-nav-menu-active,
+.bottombar-nav-menu {
+    margin: 0; /* Remove margin */
+    padding: 15px 30px; /* Adjust padding */
+    width: 85%; /* Full width */
+    height: 70%;
+    box-sizing: border-box; /* Include padding and border in size calculations */
+}
+
+/* Additional styling for active menu items */
+.bottombar-nav-menu-active {
+    background: var(--secondary); /* Change background color */
+    color: var(--text); /* Change text color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.bottombar-nav-menu-active i{
+    color: var(--text);
+    background: var(--secondary);
+}
+
+
+
+
+.slide-up-bar.open {
+    visibility: visible; /* Make the element visible */
+    opacity: 1; /* Make the element fully opaque */
+    transform: translateY(0); /* Slide the bar up */
+}
+
+
+
+
+
+}

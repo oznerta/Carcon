@@ -1,0 +1,298 @@
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: var(--z-fixed);
+    padding-right: 120px;
+    padding-left: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary);
+    transition: all .50s ease;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+    color: var(--text);
+}
+
+.logo img{
+    width: 80px; 
+    height: auto;
+}
+
+.nav-links{
+    display: flex;
+}
+
+.nav-links a{
+    margin: 0 35px;
+    color: var(--text);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    transition: all .50s ease;
+}
+
+.nav-links a:hover{
+    color: var(--secondary);
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+
+.button-2{
+	transform: scale(1.1);
+	background: var(--light-secondary);
+    color: var(--light-text);
+    transition: all .6s ease;
+}
+
+.button-2:hover {
+	background: var(--secondary);
+    color: var(--text);
+    transform: none;
+}
+
+
+
+
+
+#menu-icon{
+    font-size: var(--h1-font-size);
+    color: var(--text);
+    z-index: var(--z-modal);
+    cursor: pointer;
+    display: none;
+}
+
+/* Section 1 */
+
+.hero-section{
+    margin-top: 100px;
+    display: flex; /* Use flexbox layout */
+    align-items: center;
+    padding: 1rem;
+}
+
+.column {
+    flex: 1; /* Equal width for each column */
+
+}
+
+.column h2 {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.column p {
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.hero-section-description{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+
+.hero-title{
+    text-align: center;
+    font-size: var(--h1-font-size);
+}
+
+
+.hero-text{
+    margin-top: 30px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    padding: 10px;
+}
+
+.hero-buttons{
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+    justify-content: center;
+    
+}
+/* CSS for the highlighted text */
+.highlight {
+    color: #53b139;
+    font-weight: var(--font-bold);
+}
+
+
+.hero-section-img img {
+    margin-top: 100px;
+    filter: drop-shadow(5px 5px 15px rgba(83, 177, 57, 0.3));
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: float 4s ease-in-out infinite; /* Animation properties */
+}
+
+/* Keyframes for the floating effect */
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Start position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+    100% {
+        transform: translateY(0); /* Return to start position */
+    }
+}
+
+
+
+
+/* =========== BREAKPOINTS ==============*/
+/* For large devices */
+@media screen and (max-width: 1300px){
+    nav{
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+    
+    .nav-links a{
+    margin: 0 25px;
+	}
+
+}
+
+@media screen and (max-width: 1044px){
+    nav{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+
+    .hero-buttons{
+        gap: var(--mb-0-5);
+    }
+
+    .hero-text{
+        text-align: center;
+    }
+    
+    .hero-section{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-section-description{
+		align-items: center;;
+		order: 2;
+	}
+	
+	.hero-section-img img{
+        width: 500px;
+        margin-top: 0px;
+    }
+}
+
+/* For medium devices */
+@media screen and (max-width: 900px) {
+    .nav-links a{
+        margin: 0 15px;
+    }
+    
+    #menu-icon{
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--background);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 180px;
+        opacity: 0; /* Initially hidden */
+        visibility: hidden; /* Hide element */
+        transition: opacity 0.7s ease, visibility 0.7s ease;
+    }
+
+    .nav-links a {
+        display: block;
+        margin: 0 0 50px 0;
+    }
+
+    .nav-links.open {
+        opacity: 1; /* Show element */
+        visibility: visible; /* Make element visible */
+    }
+
+    
+}
+
+@media screen and (max-width: 750px){
+	.hero-section-img img{
+		padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .hero-section-description{
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .hero-section-img img{
+        width: 500px;
+        margin-top: 0px;
+    }
+
+    
+    
+}
+
+@media screen and (max-width: 576px){
+    .hero-section-description{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .hero-section{
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 423px){
+    .hero-buttons a{
+		font-size: var(--smaller-font-size);
+		padding: 15px 25px;
+	}
+    
+    
+}
+
+
+
+
+/* For small devices */
+@media screen and (max-width: 350px){
+    
+    
+}
+
+

@@ -1,0 +1,33 @@
+h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  
+  /* Style the input fields to look disabled */
+.disabled-input {
+    background-color: #e0e0e0; /* Light gray background color */
+    color: #a0a0a0; /* Light gray text color */
+    cursor: not-allowed; /* Cursor style to indicate not allowed */
+}
+
+/* Hover effect for the disabled input fields */
+.disabled-input:hover {
+    cursor: not-allowed; /* Keep cursor style as not allowed on hover */
+}

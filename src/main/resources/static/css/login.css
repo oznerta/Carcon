@@ -1,0 +1,164 @@
+body{
+    background: var(--background);
+}
+
+/* Set the sign-in form to be visible by default */
+#signInForm {
+    display: block; /* Show sign-in form by default */
+}
+
+/* Set the sign-up form to be hidden by default */
+#signUpForm {
+    display: none; /* Hide sign-up form by default */
+}
+
+
+.back {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    cursor: pointer; 
+    z-index: 1000; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+
+.back i {
+    font-size: var(--h1-font-size); 
+    color: var(--primary); 
+    margin-right: 10px;
+}
+
+.back-text{
+    color: var(--text);
+    font-weight: var(--font-medium);
+}
+
+
+.login-page {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+/* Left column: Login form */
+.login-form-column {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+    border: solid 1px var(--light-text);
+    position: relative;
+}
+
+.login-form-container {
+    width: 80%;
+    max-width: 400px;
+    
+}
+
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    color: var(--text);
+    margin-bottom: 30px;
+}
+
+.logo img{
+    width: 80px; 
+    height: auto;
+    margin-right: -15px;
+}
+
+.login-title {
+    color: var(---text);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.login-subtitle {
+    font-size: var(--normal-font-size);
+    color: var(--primary);
+    font-weight: var(--font-normal);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.label{
+    margin-bottom: -10px;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.login-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form-container input{
+    background: var(--light-background);
+}
+
+
+
+.login-form-container input, .login-form-container button {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button{
+    width: 100%;
+}
+
+
+
+/* Right column: Image */
+.image-column {
+    width: 50%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-column img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.signup{
+    text-align: center;
+}
+
+.signup-text{
+	cursor: pointer;
+    color: var(--primary);
+}
+
+@media screen and (max-width: 1280px) {
+    /* Hide the image column */
+    .image-column {
+        display: none;
+    }
+    
+    /* Set the login form column to take up the full width */
+    .login-form-column {
+        width: 100%; /* Make the form column take the full width */
+    }
+    
+    /* Center the form container */
+    .login-form-container {
+        margin: 0 auto; /* Center the form container */
+    }
+}

@@ -1,0 +1,365 @@
+.car-sales-container-mobile{
+    display:none;
+}
+
+/* Container for the car sales table */
+.car-sales-container {
+    margin-top: 40px;
+}
+
+/* Style the table */
+.car-sales-table {
+    width: 100%; /* Make the table take up the full width of the container */
+    border-collapse: separate; /* Separate cell borders */
+    border-spacing: 0px;
+    border-radius: 10px; /* Border-radius for rounded corners */
+    overflow: hidden; /* Hide overflow to properly show rounded corners */
+}
+
+.car-sales-table th,
+.car-sales-table td {
+    padding: 10px; /* Add padding to cells */
+    text-align: left; /* Align text to the left */
+}
+
+.car-sales-table th {
+    font-size: var(--normal-font-size);
+    background-color: var(--primary); /* Add a background color to the table header */
+    font-weight: var(--font-medium); /* Make header text bold */
+}
+
+.car-sales-table tbody tr {
+    font-size: var(--smaller-font-size);
+    background: var(--secondary);
+}
+
+.car-sales-table tbody tr a{
+    color: var(--text);
+}
+
+/* Add a white background color between rows */
+.car-sales-table tbody tr:not(:last-child) td {
+    border-bottom: 1px solid var(--background);
+}
+
+.car-sales-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px; /* Bottom-left rounded corner */
+}
+
+.car-sales-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px; /* Bottom-right rounded corner */
+}
+
+
+.status-container-open{
+    border-radius: 10px;
+    background: var(--light-secondary);
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    color: var(--light-text);
+    font-weight: var(--font-semi-bold);
+    width: 130px;
+    height: 30px;
+}
+
+.status-container-closed{
+    border-radius: 10px;
+    background: var(--background);
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    color: var(--text);
+    font-weight: var(--font-semi-bold);
+    width: 130px;
+    height: 30px;
+}
+
+.status-container-deleted{
+    border-radius: 10px;
+    background: var(--text);
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    color: var(--secondary);
+    font-weight: var(--font-semi-bold);
+    width: 130px;
+    height: 30px;
+}
+
+
+
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    background-color: #d5d5d5;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+input[type="checkbox"]:after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 9px;
+    color: var(--text);
+    display: none;
+}
+
+input[type="checkbox"]:hover{
+    background-color: #a5a5a5;
+
+}
+
+input[type="checkbox"]:checked{
+    background-color: var(--light-text);
+    border: 1px solid var(--background);
+}
+
+input[type="checkbox"]:checked:after{
+    display: block;
+}
+
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    background-color: var(--primary);
+    overflow: hidden;
+    border-radius: 4px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+/* Show dropdown menu when checkbox is checked */
+.custom-checkbox:checked + .checkbox-custom + .dropdown-menu {
+    display: block;
+}
+
+/* Style each option in the dropdown menu */
+.dropdown-menu li {
+    padding: 10px 0px 10px 50px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+/* Style the dropdown menu options on hover */
+.dropdown-menu li:hover {
+    background-color: var(--secondary);
+    
+}
+
+/* Style the action bar */
+#action-bar-desktop,
+#action-bar-mobile {
+    position: fixed; /* Make the action bar fixed at the bottom of the viewport */
+    bottom: 55px; /* Align the action bar to the bottom */
+    left: calc(50% + 265px / 2); /* Align it to the horizontal center */
+    transform: translateX(-50%); /* Center it horizontally */
+    padding: 10px; /* Add padding around the content */
+    border-top: 1px solid #ccc; /* Add a top border */
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Center the content within the action bar */
+    align-items: center; /* Vertically align items in the center */
+    width: 100%; /* Set the width of the action bar */
+    max-width: 430px; /* Set a maximum width for the action bar */
+    border-radius: 20px; /* Add some border-radius for rounded corners */
+    z-index: var(--tooltip); /* Ensure the action bar stays on top of other content */
+    background-color: rgba(8, 14, 6, 0.5);
+}
+
+
+
+.button{
+    margin-left: 30px;
+    margin-right: -10px;
+}
+#edit-button-desktop:disabled,
+#delete-button-desktop:disabled,
+#edit-button-mobile:disabled,
+#delete-button-mobile:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+
+@media screen and (max-width: 1300px){
+    .main-container{
+        width:100%;
+    }
+
+    .car-sales-container-mobile{
+        display: block;
+    }
+
+    .car-sales-container{
+        display:none;
+    }
+
+    .filter-container-mobile{
+        display: flex;
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+
+    .custom-checkbox-container-mobile{
+        display: flex;
+        align-items: center;
+    }
+
+    .custom-checkbox{
+        margin-right: 30px;
+    }
+    
+    .carlist-menu-mobile-container{
+        display: flex;
+        gap: 30px;
+    }
+
+    .carlist-menu-mobile-container a{
+        font-size: var(--small-font-size);
+        color: var(--text)
+    }
+
+    .carlist-menu-mobile-active li{
+        color: var(--primary);
+        border-bottom: 1px solid var(--primary);
+    }
+
+    .carlist-menu-mobile-active:hover li{
+        color: var(--secondary);
+    }
+
+    .car-sales-item-mobile{
+        margin-top: 10px;
+        background: var(--secondary);
+        height: 100px;
+        padding: 15px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .car-details-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .car-details-mobile-title{
+        font-size: var(--normal-font-size);
+        color: var(--text);
+        margin-right: 30px;
+    }
+
+    .status-container-open-mobile{
+        border-radius: 10px;
+        margin-left: 30px;
+        background: var(--light-secondary);
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        color: var(--light-text);
+        font-weight: var(--font-semi-bold);
+        width: 130px;
+        height: 30px;
+    }
+
+    
+
+}
+
+
+/* For medium devices */
+@media screen and (max-width: 767px) {
+    #action-bar-mobile{
+        left: calc(50% + 0px / 2);
+    }
+    .main-container h2{
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .car-details-mobile{
+        font-size: var(--normal-font-size);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .car-details-mobile-title{
+        margin-right: 0px;
+    }
+
+    
+}
+
+@media screen and (max-width: 500px){
+
+    .carlist-menu-mobile-container a{
+        font-size: var(--tiny-font-size);
+    }
+    .car-sales-item-mobile{
+        flex-direction: column;
+        align-items: flex-start;
+        height: 150px;
+    }
+
+    .car-details-mobile{
+        margin-top: 10px;
+    }
+
+    .status-container-open-mobile{
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+
+}
+
+@media screen and (max-width: 450px){
+    #action-bar-mobile {
+        display: flex;
+        justify-content: space-around;
+        align-items: space-around;
+        width: 90%; /* Set a smaller width for the mobile action bar */
+        padding: 5px; /* Reduce padding to make it more compact */
+        max-width: none; /* Remove the maximum width constraint */
+        border-radius: 10px; /* Slightly smaller border-radius */
+
+    }
+
+    #action-bar-mobile span{
+        font-size: var(--small-font-size);
+    }
+
+    .button{
+        padding: 5px 30px;
+        margin-left: 30px;
+        margin-right: -20px;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .button{
+        padding: 5px 25px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .button{
+        padding: 5px 15px;
+    }
+}

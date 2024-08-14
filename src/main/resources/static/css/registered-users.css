@@ -1,0 +1,65 @@
+
+.table-responsive {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap; /* Prevent text wrapping */
+    margin-bottom: 10px; /* Add margin for aesthetics */
+}
+
+/* Style the table */
+.users-table {
+    width: 100%; /* Make the table take up the full width of the container */
+    border-collapse: separate; /* Separate cell borders */
+    border-spacing: 0px;
+    border-radius: 10px; /* Border-radius for rounded corners */
+    overflow: hidden; /* Hide overflow to properly show rounded corners */
+}
+
+.users-table th,
+.users-table td {
+    padding: 10px; /* Add padding to cells */
+    text-align: left; /* Align text to the left */
+}
+
+.users-table th {
+    font-size: var(--normal-font-size);
+    background-color: var(--primary); /* Add a background color to the table header */
+    font-weight: var(--font-medium); /* Make header text bold */
+}
+
+.users-table tbody tr {
+    font-size: var(--smaller-font-size);
+    background: var(--secondary);
+}
+
+.users-table tbody tr a {
+    color: var(--text);
+}
+
+/* Add a white background color between rows */
+.users-table tbody tr:not(:last-child) td {
+    border-bottom: 1px solid var(--background);
+}
+
+.users-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px; /* Bottom-left rounded corner */
+}
+
+.users-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px; /* Bottom-right rounded corner */
+}
+
+
+/* CSS for disabled buttons */
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.main-container h2{
+	margin-bottom: 40px;
+}
+
+
+
+
+

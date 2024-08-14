@@ -1,0 +1,305 @@
+.post-details{
+    margin-top: 30px;
+}
+
+.back-home{
+    display: flex;
+}
+/* Disabled input style */
+input:disabled {
+    background-color: #f2f2f2; /* Light grey background */
+    color: #999; /* Light grey text color */
+    border: 1px solid #ccc; /* Light grey border */
+    cursor: not-allowed; /* Changes cursor to not-allowed */
+}
+
+/* Disabled button style */
+button:disabled {
+    background-color: #e0e0e0; /* Light grey background */
+    color: #999; /* Light grey text color */
+    border: 1px solid #ccc; /* Light grey border */
+    cursor: not-allowed; /* Changes cursor to not-allowed */
+}
+
+
+.back-home a{
+    display: flex;
+    align-items: center;
+    color: var(--text);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.back-home i{
+    margin-right: 7px;
+    color: var(--primary);
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+}
+
+.car-details{
+    margin-top: 20px;
+    display: flex;
+}
+
+.car-details-profile{
+	display: flex;
+	margin-left: 10px;
+	margin-top: 30px;
+	align-items: center;
+}
+
+.car-details-profile  img{
+	margin-right: 10px;
+}
+
+.car-details-img-container{
+    background: var(--primary);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow:hidden;
+    width: 90%;
+    height: 479px;
+}
+
+.car-details-img-container img{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car-details-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--primary);
+    padding: 10px 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 50%;
+}
+
+.car-details-desciption{
+    font-size: var(--normal-font-size);
+}
+
+.car-details-desciption p strong{
+    font-weight: var(--font-medium);
+}
+
+.car-details-desciption-title{
+    font-size: var(--h3-font-size);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.car-details-desciption-title i{
+    margin-right: 10px;
+    color: var(--secondary);
+}
+
+.car-details-desciption p {
+    margin-bottom: 10px;
+}
+
+.place-bid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the gap between elements for better spacing */
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center; /* Align the icon and input field vertically */
+    border: 1px solid #ccc; /* Optional: Add a border for the wrapper */
+    border-radius: 4px; /* Optional: Add a border radius */
+    padding: 5px; /* Padding to space out the icon and input */
+    background-color: #f8f8f8; /* Optional: Add a background color */
+}
+
+.input-wrapper i {
+    margin-right: 5px; /* Add spacing between icon and input */
+    color: #666; /* Optional: Set color for the icon */
+}
+
+.input-wrapper input {
+    border: none; /* Remove border from the input */
+    outline: none; /* Remove focus outline */
+    padding: 5px; /* Padding inside the input */
+    flex: 1; /* Allow the input to take up the rest of the space */
+}
+
+.place-bid p{
+    margin-top: -8px;
+    font-size: var(--smaller-font-size);
+}
+
+.button{
+    margin-bottom: 10px;
+}
+
+.photos-title{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+.photos-title i{
+    margin-right: 10px;
+    font-size: var(--normal-font-size);
+    color: var(--secondary);
+}
+
+
+/* Style the uploaded images container */
+.uploaded-images-container {
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--secondary);
+    height: auto;
+    scroll-behavior: smooth;
+}
+
+/* Adjusting the CSS to reflect the active state on the images wrapper when dragging starts */
+.uploaded-image:active {
+    cursor: grabbing;
+}
+
+
+.uploaded-images-container::-webkit-scrollbar {
+    width: 0; /* Hide the scrollbar */
+    height: 0; /* Hide the scrollbar */
+}
+
+/* Style the images wrapper for uploaded images */
+.images-wrapper {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    gap: 10px;
+}
+
+/* Style for uploaded images */
+.uploaded-image {
+    border-radius: 10px;
+    margin: 0px 10px;
+    width: 80px;
+    transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Define styles for the selected image */
+.uploaded-image.selected {
+	padding: 10px;
+    border: 1px solid var(--text); /* Reduce border width for a more subtle effect */
+    transform: scale(1.05); /* Slightly enlarge the selected image */
+}
+
+/* Define styles for images on hover */
+.uploaded-image:hover {
+    padding: 10px;
+    border: 1px solid var(--text); /* Reduce border width for a more subtle effect */
+    transform: scale(1.05); /* Slightly enlarge the selected image */
+}
+
+
+/* Container for the bidding history */
+.bidding-history-container {
+    margin-top: 80px;
+}
+
+.bidding-countdown{
+	margin-top: 10px;
+	font-size: var(--smaller-font-size);
+}
+
+/* Style the table */
+.bidding-history-table {
+    width: 100%; /* Make the table take up the full width of the container */
+    border-collapse: separate; /* Separate cell borders */
+    border-spacing: 0px;
+    border-radius: 10px; /* Border-radius for rounded corners */
+    overflow: hidden; /* Hide overflow to properly show rounded corners */
+}
+
+.bidding-history-table th,
+.bidding-history-table td {
+    padding: 10px; /* Add padding to cells */
+    text-align: left; /* Align text to the left */
+}
+
+.bidding-history-table th {
+    font-size: var(--normal-font-size);
+    background-color: var(--primary); /* Add a background color to the table header */
+    font-weight: var(--font-medium); /* Make header text bold */
+}
+
+.bidding-history-table tbody tr{
+    font-size: var(--smaller-font-size);
+    border-bottom: 1px solid white; /* Add a small transparent border to create a thin gap */
+    background: var(--secondary);
+}
+
+/* Add a white background color between rows */
+.bidding-history-table tbody tr:not(:last-child) td {
+    border-bottom: 1px solid var(--background);
+}
+
+
+
+
+
+.bidding-history-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px; /* Bottom-left rounded corner */
+}
+
+.bidding-history-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px; /* Bottom-right rounded corner */
+}
+
+
+@media screen and (max-width: 1500px){
+    .main-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .car-details{
+        flex-direction: column;
+        
+    }
+
+    .car-details-img-container{
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 15px;
+        width: 100%;
+    }
+
+    .car-details-img-container img{
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 15px;
+    }
+
+    .car-details-data{
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 767px){
+    .back-home{
+        margin-top: 60px;
+    }
+    .bidding-history-container {
+        margin-bottom: 100px; /* Adds 100px margin below the entire table */
+    }
+    
+}

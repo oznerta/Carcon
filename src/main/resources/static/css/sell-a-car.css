@@ -1,0 +1,164 @@
+.car-sale-title{
+    display: flex;
+}
+
+.car-sale-title h1{
+    margin-right: 15px;
+}
+
+#car-sale-form{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-sale-form-items{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.car-sale-input{
+    border-radius: 8px;
+    padding: 10px;
+    background-color: var(--text)
+}
+
+.car-sale-input::placeholder {
+    color: #888;
+}
+
+.price-input-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .car-sale-form-upload{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 10px;
+    height: 250px;
+    color: var(--primary);
+    background: var(--text);
+}
+
+.car-sale-upload{
+    
+} */
+
+.file-uploader-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--text); /* Change as needed */
+    border-radius: 10px; /* Change as needed */
+    cursor: pointer;
+    padding: 50px;
+}
+
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-uploader-box {
+    text-align: center;
+}
+
+.file-uploader-box img {
+    margin-top: 15px;
+    width: 96px;
+    height: 77px;
+}
+
+.file-uploader-box h3{
+    color: var(--light-text);
+
+}
+
+.file-uploader-box p{
+    margin-top: 10px;
+    color: var(--secondary);
+}
+
+.file-uploader-button{
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: var(--text);
+    font-size: var(--normal-font-size);
+    background: var(--light-text);
+}
+
+/* Style for the uploaded images container */
+.uploaded-images-container {
+    margin-top: 10px;
+    display: flex;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical overflow */
+    gap: 10px; /* Adds spacing between images */
+    padding: 10px; /* Padding inside the container */
+    max-width: 100%; /* Limit the container width to the full width of the parent */
+    max-height: 110px; /* Set maximum height to keep images visible within a reasonable space */
+    scroll-behavior: smooth;
+}
+
+.uploaded-images-container:active {
+    cursor: grabbing; /* Cursor should change to grabbing when the user is dragging */
+}
+
+.uploaded-images-container::-webkit-scrollbar {
+    width: 0; /* Hide the scrollbar */
+    height: 0; /* Hide the scrollbar */
+}
+
+/* Style for the uploaded images */
+.uploaded-images-container img {
+    cursor: grab;
+    width: 100px; /* Fixed width for images */
+    height: 100px; /* Fixed height for images */
+    object-fit: cover; /* Ensures the image covers its container */
+    border-radius: 5px; /* Rounded corners for images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow around images */
+}
+
+
+/* Style for the "+N" indicator */
+.image-count-indicator {
+    display: none; /* Initially hidden */
+    font-size: 20px;
+    color: #888;
+    margin-left: 10px; /* Add space to the left */
+}
+
+@media screen and (max-width: 767px){
+    .car-sale-title{
+        margin-top: 60px;
+    }
+
+    .submit-button{
+        margin-bottom: 70px;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 576px){
+    .file-uploader-container{
+        padding: 20px;
+    }
+}

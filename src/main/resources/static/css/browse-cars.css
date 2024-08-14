@@ -1,0 +1,386 @@
+
+.main-inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add space between elements */
+}
+
+/* Search container */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--text);
+    border-radius: 8px; /* Rounded corners */
+    padding: 8px; /* Padding inside the container */
+    background-color: var(--text); /* Background color */
+    transition: border-color 0.3s; /* Add transition for focus effect */
+}
+
+.search-container:hover {
+    border-color: var(--primary); /* Change border color on hover */
+}
+
+.search-icon {
+    width: 24px; /* Set width of search icon */
+    height: 24px; /* Set height of search icon */
+    margin-right: 8px; /* Add space between icon and input */
+}
+
+.search-input {
+    flex-grow: 1; /* Allow input field to take up remaining space */
+    border: none; /* Remove default border */
+    outline: none; /* Remove default outline */
+    background: transparent; /* Remove background color */
+    font-size: var(--normal-font-size); /* Font size */
+    padding: 4px 0; /* Padding for input */
+    width: 100%;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-input:focus{
+    border: none;
+}
+
+/* ========================No Result============================= */
+.no-result-container{
+    margin-top: 30px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-home{
+    display: flex;
+}
+
+.back-home a{
+    display: flex;
+    align-items: center;
+    color: var(--text);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.back-home i{
+    margin-right: 7px;
+    color: var(--primary);
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+}
+
+.no-result{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-result img{
+    width: 500px;
+    height: auto;
+}
+
+.no-result-title{
+    margin-top: 50px;
+    font-size: var(--h2-font-size);
+}
+
+.no-result-description{
+    font-size: var(--smaller-font-size);
+}
+
+
+/* ========================Sort Filter============================= */
+.sort-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Label styles */
+.sort-filter label {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* List styles */
+.sort-options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* List item styles */
+.sort-options-list li {
+    border-radius: 5px;
+    font-size: var(--smaller-font-size);
+    cursor: pointer;
+    display: inline-block; /* Display inline to appear as options */
+    margin-right: 5px; /* Add some spacing between list items */
+}
+
+.sort-options-list li:hover {
+    color: var(--secondary); /* Text color when hovered */
+}
+
+/* Active effect */
+.sort-options-list li.active {
+    color: var(--primary); /* Text color when active */
+    border-bottom: 1px solid var(--primary);
+}
+
+/* Icon styles */
+.sort-filter .uil {
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.mobile-sort-filter {
+    display: none;
+}
+
+.filter-title{
+    margin-top: 20px;
+    font-size: var(--h3-font-size);
+}
+
+.loading-animation {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Adjust as needed */
+  /* Additional styling for the loading animation */
+}
+
+
+
+/* ========================Grid Container============================= */
+
+/* Grid container styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+    gap: 20px; /* Spacing between grid items */
+    margin-top: 20px;
+}
+
+/* Car card styling */
+.car-card {
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Container for the entire card */
+.car-card {
+    border-radius: 5px; /* Apply border radius to the card */
+    overflow: hidden; /* Hide content that overflows the boundaries */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect for the whole card */
+}
+
+/* Wrapper for the image */
+.car-card .img-wrapper {
+    border-radius: 5px; /* Maintain rounded corners */
+    overflow: hidden; /* Hide content that overflows the boundaries */
+}
+
+/* Image styling */
+.car-card .img-wrapper img {
+    width: 100%; /* Image takes up the full width of the container */
+    height: 140px; /* Adjust as needed */
+    object-fit: cover; /* Ensure the image maintains aspect ratio and fills the container */
+    border-radius: 5px; /* Maintain rounded corners */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+    transform-origin: center; /* Image scales around its center point */
+}
+
+/* Zoom-in effect on hover */
+.car-card:hover .img-wrapper img{
+    
+    transform: scale(1.1); /* Adjust the scale value as needed */
+}
+
+.car-title{
+    margin-top: 10px;
+    font-size: var(--h3-normal-size);
+    font-weight: var(--font-medium);
+}
+
+.car-card:hover .car-price {
+    color: var(--secondary); 
+}
+
+
+/* Car info styling */
+.car-info {
+    margin-top: 5px;
+    font-size: var(--smaller-font-size);
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.car-price{
+    font-size: var(--small-font-size);
+    color: var(--light-accent);
+}
+
+
+
+
+
+
+
+
+
+
+/* ==============Pagination container==================================== */
+.pagination-container {
+    display: flex;
+    justify-content: center; /* Center the pagination */
+    margin-top: 20px; /* Add spacing above the pagination */
+}
+
+/* Pagination list */
+.pagination {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display pagination links in a row */
+    gap: 8px; /* Space between pagination items */
+}
+
+/* Pagination links */
+.pagination-link {
+    padding: 8px 12px;
+    border: 1px solid #ccc; /* Border around links */
+    border-radius: 4px; /* Rounded corners */
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+/* Pagination links hover */
+.pagination-link:hover {
+    background-color: #007BFF; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Active pagination link */
+.pagination-item.active .pagination-link {
+    background-color: #007BFF; /* Background color for active link */
+    color: white; /* Text color for active link */
+}
+
+@media screen and (max-width: 1300px){
+    .main-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .grid-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px){
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 767px){
+	.margin-bottom{
+		margin-top: 100px;
+	}
+    .main-inner-container{
+        margin-top: 70px;
+    }
+    .sort-filter{
+        display: none;
+    }
+
+    .mobile-sort-filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        margin-top: 30px;
+        padding: 10px;
+        border-radius: 5px; /* Rounded corners for a smooth appearance */
+    }
+
+
+    /* Select box styles */
+    .mobile-sort-filter select {
+        padding: 5px 10px; /* Padding for a better user experience */
+        margin-left: -15px;
+        border: none;
+        border-radius: 5px;
+        color: var(--primary);
+        font-size: var(--smaller-font-size); /* Consistent font size with the label */
+        cursor: pointer; /* Indicates that it is interactive */
+        background-color: transparent;
+    }
+
+    
+
+    /* Styles for dropdown options */
+    .mobile-sort-filter select option {
+        background-color: var(--text); /* Change to the desired background color */
+        color: var(--primary); /* Change the text color if needed */
+    }
+
+    
+
+    .mobile-sort-filter select:focus {
+        outline: none; /* Removes the default outline when focused */
+        border: none; /* Removes the border when focused */
+    }
+
+    
+
+    /* Icon styles */
+    .mobile-icon {
+        font-size: 20px; /* Adjust font size as desired */
+        margin-left: 10px;
+        cursor: pointer; /* Indicates that the icon is interactive */
+        color: var(--primary); 
+    }
+
+    /* Grid container styles */
+    .mobile-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid columns */
+        gap: 15px; /* Space between grid items */
+        margin-top: 20px; /* Space between the filter and the grid */
+    }
+
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .grid-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* For small devices */
+@media screen and (max-width: 350px){
+    
+}
